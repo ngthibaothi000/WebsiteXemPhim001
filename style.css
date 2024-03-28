@@ -139,10 +139,12 @@ head {
     position: fixed;
     top: 12%;
     transform: translate(-15%);
-    left: 40px;
+    left: 90px;
     display: flex;
     flex-direction: column;
     row-gap: 2.5rem;
+    z-index: 40;
+    font-size: 23px;
 }
 
 .nav-link {
