@@ -1,4 +1,4 @@
-var swiper = new Swiper(".popular-content ", {
+var swiper = new Swiper(".popular-content", {
     slidesPerView: 1,
     spaceBetween: 10,
     autoplay: {
@@ -33,3 +33,21 @@ var swiper = new Swiper(".popular-content ", {
         
     }
   });
+
+  //show videos
+let playButton = document.querySelector('.play-movie');
+let video = document.querySelector('.video-container');
+let closebtn = document.querySelector('.close-video');
+let myvideo = document.querySelector('#myvideo');
+
+playButton.onclick = () =>{
+  video.classList.add('show-video');
+  //Auto play
+  myvideo.play();
+};
+
+closebtn.onclick = () =>{
+  video.classList.remove('show-video');
+  //Pause
+  myvideo.pause();
+}
