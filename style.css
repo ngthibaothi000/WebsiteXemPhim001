@@ -155,17 +155,17 @@ head {
 }
 
 .nav-link:hover,
-.nav-active{
+.nav-active {
     color: var(--text-color);
     transition: 0.3s all linear;
     transform: scale(1.1);
 }
 
-.nav-link bx{
+.nav-link bx {
     font-size: 1.6rem;
 }
 
-.nav-link-title{
+.nav-link-title {
     font-size: 0.7rem;
 }
 
@@ -178,7 +178,7 @@ head {
     border-radius: 0.5rem;
 }
 
-.home-img{
+.home-img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -187,49 +187,49 @@ head {
     border-radius: 0.5rem;
 }
 
-.home-text{
+.home-text {
     padding: 40px;
 }
 
-.home-title{
+.home-title {
     font-size: 2rem;
     font-weight: 600;
 }
 
-.home-text p{
+.home-text p {
     font-size: 0.938rem;
     margin: 10px 0 20px;
     color: var(--main-color);
 }
 
-.watch-btn{
+.watch-btn {
     display: flex;
     align-items: center;
     column-gap: 0.8rem;
     color: var(--text-color);
 }
 
-.watch-btn .bx{
+.watch-btn .bx {
     font-size: 21px;
     background: var(--main-color);
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 43px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.watch-btn .bx:hover{
+.watch-btn .bx:hover {
     background: var(--hover-color);
 }
 
-.watch-btn span{
+.watch-btn span {
     font-size: 1rem;
     font-weight: 400;
 }
 
-.heading{
+.heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -297,7 +297,7 @@ head {
     margin: 0 0 0 10px !important;
 }
 
-.swiper-button-next::after, 
+.swiper-button-next::after,
 .swiper-button-prev::after {
     color: var(--text-color);
     font-size: 18px !important;
@@ -399,8 +399,8 @@ head {
 
 .play-movie {
     position: absolute;
-    bottom: 18rem;
-    right: 10rem;
+    /* bottom: 18rem;
+    right: 10rem; */
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -538,6 +538,10 @@ head {
 
 .swiper {
     height: 400px;
+}
+
+.tl {
+    margin-left: 52px;
 }
 
 /*Responsive*/
