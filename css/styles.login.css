@@ -1,157 +1,233 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-link {
-  margin-left: 108px;
-  font-size: 53px;
-  font-family: ui-rounded;
-  color: red; /* Change color to red */
-  font-weight: bold; /* Increase font weight */
+:root {
+    --main-color: #ffb43a;
+    --hover-color: hsl(37, 94%, 57%);
+    --body-color: #1e1e2a;
+    --container-color: #2d2e37;
+    --text-color: #fcfeff;
 }
 
-body {
-  background: url('https://www.flixfilmer.no/wp-content/uploads/2019/01/netflix-logo.png');
-  background-size: cover;
-  background-position-y: -80px;
-  font-size: 16px;
-}
-
-#wrapper {
-  min-height: 100vh;
+body{
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background:  url(https://wallpaperbat.com/img/465731-beautiful-minimalist-desktop-wallpaper-4k.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#form-login {
-  max-width: 400px;
-  background: rgba(0, 0, 0, 0.8);
-  flex-grow: 1;
-  padding: 30px 30px 70px;
-  box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
-  position: relative;
-}
-
-
-.form-heading{
-  font-size: 25px;
-  color: #f5f5f5;
-  text-align: center;
-  margin-bottom: 30px;
-  position: absolute;
-  z-index: 99;
-  top: 3; /* Add top: 0; to position the heading at the top */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%);
-}
-
-.form-group {
-  border-bottom: 1px solid #fff;
-  margin-top: 50px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center; /* Center the items horizontally */
-  align-items: center; 
-}
-
-.form-group i {
-  color: #fff;
-  font-size: 14px;
-  padding-top: 5px;
-  padding-right: 10px;
-}
-
-.form-input {
-  background: transparent;
-  border: 0;
-  outline: 0;
-  color: #f5f5f5;
-  flex-grow: 1;
-}
-
-.form-input::placeholder {
-  color: #f5f5f5;
-}
-
-#eye i {
-  padding-right: 0;
-  cursor: pointer;
-
-}
-
-.form-submit {
-  background: transparent;
-  border: 1px solid #f5f5f5;
-  color: #fff;
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  text-transform: uppercase;
-  padding: 6px 10px;
-  transition: 0.25s ease-in-out;
-  margin-top: 30px;
-}
-
-.form-submit.form-submit::holver {
-  border: 1px solid #1f92a7;
-}
-.footer {
-  background-color: black;
-  height: 300px;
-  box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.8); /* Điều chỉnh giá trị tùy thích */
-}
-.remember-forgot{
+  padding: 20px 100px;
   display: flex;
   justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px; 
+  align-items: center;
+  z-index: 99;
 }
-.remember-forgot label {
-color: #fff;
-margin-right: 3px;
+ 
+.logo{
+  font-size: 1.4rem;
+  color: var(--text-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 auto 0 0;
+  user-select: none;
 }
-
-.remember-forgot input[type="checkbox"] {
-  accent-color: #fff; /* Set color for the checkbox */
-  margin-right: 3px;
-}
-
-.remember-forgot a {
-  color: #fff;
-  text-decoration: none;
+.logo span {
+  color: var(--main-color);
 }
 
-.remember-forgot a:hover {
-  text-decoration: underline;
+.navigation .btnLogin-popup{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid var(--text-color);
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: var(--text-color);
+  font-weight: 500;
+  margin-left: 40px;
+  transition: .5s;
 }
-.btn {
+
+.navigation .btnLogin-popup:hover{
+  background: var(--text-color);
+  color: var(--main-color);
+}
+
+.wrapper{
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease, height .2s ease;
+}
+.wrapper.active-popup{
+  transform: scale(1);
+}
+
+.wrapper.active{
+  height: 520px;
+}
+
+.wrapper .form-box{
   width: 100%;
-  height: 30px;
-  background: #fff;
+  padding: 40px;
+}
+
+.wrapper .form-box.login{
+
+}
+.wrapper.active .form-box.login{
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+  position: absolute;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+  transition: transform .18s ease;
+  transform: none;
+  transform: translateX(0);
+}
+
+.wrapper .icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: var(--body-color);
+  font-size: 2em;
+  color:var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form-box h2{
+  font-size: 2em;
+  color: var(--body-color);
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--body-color);
+  margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: var(--container-color);
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+  top: -5px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
   border: none;
   outline: none;
-  border-radius: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #333;
+  font-size: 1em;
+  color: var(--body-color);
   font-weight: 600;
+  padding: 0 35px 0 5px;
 }
 
-.register-link {
-  font-size: 14.5px;
+.input-box .icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: var(--body-color);
+  line-height: 57px;
+}
+
+.remember-forgot{
+  font-size: .9em;
+  color: var(--body-color);
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot label input{
+  accent-color: var(--body-color);
+  margin-right: 3px;
+}
+.remember-forgot a{
+  color: var(--body-color);
+  text-decoration: underline;
+}
+.btn{
+  width: 100%;
+  height: 45px;
+  background: var(--body-color);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.login-register{
+  font-size: .9em;
+  color: var(--body-color);
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  font-weight: 500;
+  margin: 25px 0 10px;
 }
 
-.register-link p  {
-  color: #fff;
+.login-register p a{
+  color: var(--body-color);
   text-decoration: none;
   font-weight: 600;
 }
-
-.register-link p a:hover {
+.login-register p a:hover{
   text-decoration: underline;
 }
