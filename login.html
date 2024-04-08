@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content ="IE-edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.login.css">
-    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/styles.login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+  <title>Login</title>
 </head>
+
 <body>
   <header>
     <h2 class="logo">
@@ -34,11 +37,13 @@
           <label>Email</label>
         </div>
         <div class="input-box">
-          <span class="icon">      
+          <span class="icon">
             <ion-icon name="lock-closed-outline"></ion-icon>
           </span>
-          <input type="password" required>
-          <label>Password</label>    
+          <input type="password" id="password" required>
+          <label>Password</label>
+          <i class="far fa-eye eye-icon" id="togglePassword"></i>
+
           <!-- <div id="eye">
             <i class="fas fa-eye"></i>
           </div> -->
@@ -81,7 +86,7 @@
             <i class="fas fa-eye"></i>
           </div> -->
           <label>Password</label>
-          
+
         </div>
         <div class="remember-forgot">
           <label><input type="checkbox">I agree to the terms & conditions</label>
@@ -107,6 +112,5 @@
 
   </div>
 </footer>
+
 </html>
-
-
