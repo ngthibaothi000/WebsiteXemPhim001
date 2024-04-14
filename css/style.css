@@ -56,7 +56,7 @@ img {
 }
 
 body {
-    background-color: var(--body-color);
+    background: url(https://picstatio.com/large/a60127/horizon-mountains-sunrise-5k.jpg) fixed;
     color: var(--text-color);
 }
 

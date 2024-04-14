@@ -20,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url(https://wallpaperbat.com/img/465731-beautiful-minimalist-desktop-wallpaper-4k.jpg) no-repeat;
+  background: url(https://picstatio.com/large/a60127/horizon-mountains-sunrise-5k.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -137,7 +137,7 @@ header {
 
 .form-box h2 {
   font-size: 2em;
-  color: var(--body-color);
+  color: var(--main-color);
   text-align: center;
 }
 
@@ -155,7 +155,7 @@ header {
   left: 5px;
   transform: translateY(-50%);
   font-size: 1em;
-  color: var(--container-color);
+  color: var(--main-color);
   font-weight: 500;
   pointer-events: none;
   transition: .5s;
@@ -182,7 +182,7 @@ header {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
-  color: var(--body-color);
+  color: var(--main-color);
   line-height: 57px;
 }
 
@@ -241,5 +241,6 @@ header {
   position: absolute;
   right: 10px;
   top: 20px;
-  left: 260px;
+  left: 260px;  
+  color: var(--body-color);
 }
